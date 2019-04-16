@@ -12,7 +12,7 @@
     <script>
     var eventBus = new Vue();
     Vue.component('child-component', {
-      template: '<div>하위 컴포넌트 영역입니다.<button v-on click="showLog">show</button></div>',
+      template: '<div>하위 컴포넌트 영역입니다.<button v-on:click="showLog">show</button></div>',
       methods: {
         showLog: function() {
           eventBus.$emit('triggerEventBus',100);
@@ -28,8 +28,6 @@
         });
       }
     });
-
-
     </script>
   </body>
 </html>
