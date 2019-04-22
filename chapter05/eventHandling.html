@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vue Event Handling</title>
+  </head>
+  <body>
+    <div id = "app">
+      <button v-on:click="clickBtn">클릭</button>
+      <p>
+      <button v-on:click="clickBtnSecond(10)">클릭(10)</button>
+      <p>
+      <button v-on:click="clickBtnThird">클릭</button>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+    <script>
+    new Vue({
+      el: '#app',
+      methods: {
+        clickBtn: function() {
+          alert('clicked');
+        },
+        clickBtnSecond: function(num) {
+          alert('clicked ' + num + ' times');
+        },
+        clickBtnThird: function(event) {
+          console.log(event);
+        }
+      }
+    });
+  </script>
+  </body>
+</html>
